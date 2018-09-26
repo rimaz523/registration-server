@@ -15,14 +15,16 @@ use App\Formatter\RegisteredUsersCSVExportFormatter;
  *
  * @author rimaz
  */
-class RegistrationController extends Controller {
+class RegistrationController extends Controller
+{
 
     /**
      * @Route("/home",  name="home")
      * @Method({"GET", "POST"})
      * @return Response
      */
-    public function home(Request $request) {
+    public function home(Request $request)
+    {
         $form = $this->createForm(SearchClientsForm::class);
         $searchParameters = array('isExport' => false, 'limit' => $this->getParameter('app.items_per_page'), 'offset' => 0);
         $form->handleRequest($request);
@@ -43,7 +45,8 @@ class RegistrationController extends Controller {
                     'form' => $form->createView(), 'total' => $totalCount, 'limit' => $this->getParameter('app.items_per_page'), 'offset' => $searchParameters['offset']));
     }
 
-    private function buildClientSearchParameters($formData) {
+    private function buildClientSearchParameters($formData)
+    {
         $searchParameters = array('limit' => $this->getParameter('app.items_per_page'), 'orderBy' => array('field' => 'date', 'order' => 'DESC'));
         $searchParameters['company'] = $formData['company'];
         $searchParameters['countryCode'] = $formData['countryCode'];
@@ -51,5 +54,4 @@ class RegistrationController extends Controller {
         $searchParameters['isExport'] = $formData['actionType'] == 'export';
         return $searchParameters;
     }
-
 }

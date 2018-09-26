@@ -7,8 +7,8 @@ namespace App\Formatter;
  *
  * @author rimaz
  */
-abstract class CSVFileFormatter {
-
+abstract class CSVFileFormatter
+{
     const CSV_FILE_EXTENSION = ".csv";
     const CONTENT_TYPE = "text/csv";
 
@@ -18,12 +18,13 @@ abstract class CSVFileFormatter {
 
     abstract public function getFileName();
 
-    public function getFileExtension() {
+    public function getFileExtension()
+    {
         return self::CSV_FILE_EXTENSION;
     }
 
-    public function getContentType() {
+    public function getContentType()
+    {
         return self::CONTENT_TYPE;
     }
-
 }

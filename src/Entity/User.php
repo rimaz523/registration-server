@@ -74,19 +74,21 @@ class User implements UserInterface, \Serializable
     }
     
     
-    public function getRoles() {
+    public function getRoles()
+    {
         return ['ROLE_USER'];
     }
     
-    public function getSalt() {
-        
+    public function getSalt()
+    {
     }
     
-    public function eraseCredentials() {
-        
+    public function eraseCredentials()
+    {
     }
 
-    public function serialize() {
+    public function serialize()
+    {
         return serialize([
             $this->id,
             $this->username,
@@ -95,8 +97,9 @@ class User implements UserInterface, \Serializable
         ]);
     }
 
-    public function unserialize($string) {
-        list (
+    public function unserialize($string)
+    {
+        list(
             $this->id,
             $this->username,
             $this->email,

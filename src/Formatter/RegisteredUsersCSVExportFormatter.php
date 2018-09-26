@@ -4,15 +4,15 @@ namespace App\Formatter;
 
 use App\Formatter\CSVFileFormatter;
 
-
 /**
  * Description of RegisteredUsersCSVExportFormatter
  *
  * @author rimaz
  */
-class RegisteredUsersCSVExportFormatter extends CSVFileFormatter {
-    
-    public function getCSVData($objData) {
+class RegisteredUsersCSVExportFormatter extends CSVFileFormatter
+{
+    public function getCSVData($objData)
+    {
         $fp = fopen('php://temp', 'r+');
         fputcsv($fp, $this->getCSVHeaderRow());
 
@@ -35,12 +35,14 @@ class RegisteredUsersCSVExportFormatter extends CSVFileFormatter {
         return $csv;
     }
     
-    public function getCSVHeaderRow() {
+    public function getCSVHeaderRow()
+    {
         return array("Company", "Country", "First Name", "Last Name", "Username",
             "Email", "Telephone", "Employee Count", "Date Registered");
     }
     
-    public function getFileName() {
+    public function getFileName()
+    {
         return "open_source_client_list_" . date("Y-m-d-His") . $this->getFileExtension();
     }
 }

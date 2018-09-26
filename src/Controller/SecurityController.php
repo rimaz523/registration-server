@@ -14,11 +14,11 @@ class SecurityController extends AbstractController
      */
     public function login(Request $request, AuthenticationUtils $utils)
     {
-    	$error = $utils->getLastAuthenticationError();
-    	$lastUsername = $utils->getLastUsername();
-    	if ($error) {
-    		// var_dump($error); die;
-    	}
+        $error = $utils->getLastAuthenticationError();
+        $lastUsername = $utils->getLastUsername();
+        if ($error) {
+            // var_dump($error); die;
+        }
         return $this->render('security/login.html.twig', [
             'error' => $error,
             'last_username' =>$lastUsername
@@ -28,7 +28,8 @@ class SecurityController extends AbstractController
     /**
      * @Route("/logout", name="logout")
      */
-    public function logout() {
+    public function logout()
+    {
         return $this->render('security/login.html.twig', [
             'error' => null,
             'last_username' => null

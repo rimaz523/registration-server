@@ -12,16 +12,18 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  * @method RegUsers[]    findAll()
  * @method RegUsers[]    findBy(array $criteria, array $orderBy = null, $limit = null, $offset = null)
  */
-class RegUsersRepository extends ServiceEntityRepository {
-
-    public function __construct(RegistryInterface $registry) {
+class RegUsersRepository extends ServiceEntityRepository
+{
+    public function __construct(RegistryInterface $registry)
+    {
         parent::__construct($registry, RegUsers::class);
     }
 
     /**
      * @return RegUsers[] Returns an array of RegUsers objects
      */
-    public function searchRegisteredUsers(array $searchParameters, $getCount = false) {
+    public function searchRegisteredUsers(array $searchParameters, $getCount = false)
+    {
         $query = $this->createQueryBuilder('r');
         if (isset($searchParameters['company']) && !empty($searchParameters['company'])) {
             $query->andWhere('r.company LIKE :company')
@@ -45,5 +47,4 @@ class RegUsersRepository extends ServiceEntityRepository {
         }
         return $result;
     }
-
 }
