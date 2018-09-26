@@ -36,9 +36,9 @@ class OrangeOrganizationEmployee
     private $count;
 
     /**
-     * @var \DateTime|null
+     * @var \string|null
      *
-     * @ORM\Column(name="date", type="datetime", nullable=true)
+     * @ORM\Column(name="date", type="string", nullable=true)
      */
     private $date;
 

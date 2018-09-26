@@ -1,6 +1,6 @@
 \App\Entity\User:
-  0: {UserName: 'Admin', Email: 'admin@test.com', Password: 'Admin!23'}
-  1: {UserName: 'rimaz', Email: 'rimaz@test.com', Password: 'Admin!23'}
+  0: {UserName: 'Admin', Email: 'admin@test.com', Password-Password: 'Admin!23'}
+  1: {UserName: 'rimaz', Email: 'rimaz@test.com', Password-Password: 'Admin!23'}
   
 \App\Entity\RegUsers:
   0: {InstanceIdentifier: '#123456789', Date: '2018-08-24 05:34:21', UserName: 'ricky1u2', UserEmail: 'ricky@test.com', Comments: '', Updates: '0', FirstName: 'Ricardo', LastName: 'Silva', Company: 'ABC Limited', Telephone: '0778668688', EmpCount: '550', CountryCode: 'PT', Language: 'en', Timezone: ''}
@@ -15,3 +15,27 @@
   9: {InstanceIdentifier: '#sdsesseed', Date: '2018-02-22 07:34:21', UserName: 'ron89', UserEmail: 'ron@test.com', Comments: '', Updates: '0', FirstName: 'Ron', LastName: 'Junior', Company: 'Junior Enterprises', Telephone: '0778665998', EmpCount: '0', CountryCode: 'PT', Language: 'en', Timezone: ''}
   10: {InstanceIdentifier: '#555666fs', Date: '2018-02-22 02:34:21', UserName: 'doc@3', UserEmail: 'doc@test.com', Comments: '', Updates: '0', FirstName: 'Doc', LastName: 'Block', Company: 'DOC Works', Telephone: '0778665777', EmpCount: '10', CountryCode: 'US', Language: 'en', Timezone: ''}
   
+\App\Entity\OrangeOrganizationEmployee:
+  0: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '1', Count: '0', Date: '2018-08-24 05:34:21'}
+  1: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '1', Count: '10', Date: '2018-08-24 06:34:21'}
+  2: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '1', Count: '20', Date: '2018-08-24 07:34:21'}
+  3: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '1', Count: '30', Date: '2018-08-24 08:34:21'}
+  4: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '1', Count: '40', Date: '2018-08-25 02:34:21'}
+  5: {InstanceIdentifier-\App\Entity\RegUsers: '#123456789', CountType: '2', Count: '10', Date: '2018-08-25 03:34:21'}
+  6: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '10', Date: '2018-08-25 03:34:21'}
+  7: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '20', Date: '2018-08-25 04:34:21'}
+  8: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '50', Date: '2018-08-25 05:34:21'}
+  9: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '60', Date: '2018-08-25 06:34:21'}
+  10: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '50', Date: '2018-08-25 07:34:21'}
+  11: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '60', Date: '2018-08-25 08:34:21'}
+  12: {InstanceIdentifier-\App\Entity\RegUsers: '#aad334444', CountType: '1', Count: '70', Date: '2018-08-25 09:34:21'}
+  13: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '210', Date: '2018-08-25 09:34:21'}
+  14: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '0', Date: '2018-08-25 01:34:21'}
+  15: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '10', Date: '2018-08-25 02:34:21'}
+  16: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '20', Date: '2018-08-25 03:34:21'}
+  17: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '30', Date: '2018-08-25 04:34:21'}
+  18: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '40', Date: '2018-08-25 05:34:21'}
+  19: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '2', Count: '10', Date: '2018-08-25 06:34:21'}
+  20: {InstanceIdentifier-\App\Entity\RegUsers: '#ttwe33443', CountType: '1', Count: '40', Date: '2018-08-25 07:34:21'}
+  21: {InstanceIdentifier-\App\Entity\RegUsers: '#vvv342dd@', CountType: '2', Count: '10', Date: '2018-08-25 07:34:21'}
+  22: {InstanceIdentifier-\App\Entity\RegUsers: '#rtyyurrs@', CountType: '1', Count: '0', Date: '2018-08-25 07:34:21'}

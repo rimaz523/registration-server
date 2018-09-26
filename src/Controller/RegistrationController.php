@@ -19,7 +19,7 @@ class RegistrationController extends Controller
 {
 
     /**
-     * @Route("/home",  name="home", methods={"GET", "POST"})
+     * @Route("/",  name="home", methods={"GET", "POST"})
      * @return Response
      */
     public function home(Request $request)
