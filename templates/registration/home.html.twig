@@ -1,0 +1,108 @@
+{% extends 'menu.html.twig' %}
+
+{% block title %}OHRM Registration{% endblock %}
+
+{% block extend_stylesheets %}
+    <link href="{{ asset('assets/registration/css/home.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <div class="col s12 m12 l12">
+            <div class="card large-12 grey lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title">Search Clients</span>
+                    <div class="row">
+                        {{ form_start(form, {'attr': {'novalidate': 'novalidate'}}) }}
+                        <div class="row">
+                            <div class="input-field col s6">
+                                {{ form_widget(form.company) }}
+                                <label for="company">Company</label>
+                            </div>
+                            <div class="input-field col s6">
+                                {{ form_widget(form.countryCode) }}
+                                <label>Country</label>
+                            </div>
+                        </div>
+                        <a id="formSubmitBtn" class="waves-effect waves-light btn">Search<i class="material-icons right">send</i></a>
+                        <a id="exportToCSVBtn" class="waves-effect waves-light btn">Export to CSV</a>
+                        {{ form_end(form) }}
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="container l12 client-table-container">
+        <div class="card large-12 grey lighten-5">
+            <table id="client_data" class="centered responsive-table highlight">
+                <thead>
+                    <tr>
+                        <th>Company</th>
+                        <th>Country</th>
+                        <th>Full Name</th>
+                        <th>Email</th>
+                        <th>Telephone</th>
+                        <th>Employee Count</th>
+                        <th>Date Registered</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% if registeredClients is empty %}
+                        <tr>
+                            <td colspan="8">No records found</td>
+                        </tr>
+                    {% else %}
+                        {% for client in registeredClients %}
+                            <tr>
+                                <td>{{ client.company }}</td>
+                                <td>{{ client.countryCode }}</td>
+                                <td>{{ client.firstName }} {{ client.lastName }}</td>
+                                <td>{{ client.userEmail }}</td>
+                                <td>{{ client.telephone }}</td>
+                                <td>{{ client.empCount }}</td>
+                                <td>{{ client.date }}</td>
+                                <td><button class="btn waves-effect waves-light red">Delete</button></td>
+                            </tr>
+                        {% endfor %}
+                    {% endif %}
+                </tbody>
+            </table>
+            <div class="col-md-12 right text-right">
+                <input id="page_offset" type="hidden" value="{{ offset }}"/>
+                <input id="total_count" type="hidden" value="{{ total }}"/>
+                <input id="page_limit" type="hidden" value="{{ limit }}"/>
+                <ul class="pagination">
+                    <p class="pagination-text">Showing {{ offset + 1 }} - {{ offset + registeredClients|length }} (Total : {{ total }})</p>
+                    {% if total > limit %}
+                        <li id="pageLeft" class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+                        {% if total/limit <= 5 or (offset/limit) < 3 %}    
+                            {% for i in range(1, ((total/limit)|round(0, 'ceil'))) %}
+                        <li class="waves-effect pager" page_offset="{{ (i-1) * limit }}"><a href="#!">{{ i }}</a></li>
+                            {% endfor %} 
+                        {% elseif (total/limit > 5) and (((offset/limit)|round(0, 'floor') == (total/limit)|round(0, 'floor')) or ((offset/limit)|round(0, 'floor') == ((total/limit) -1)|round(0, 'floor'))) %}
+                            {% for i in range(((total/limit)|round(0, 'ceil')-4), (total/limit)|round(0, 'ceil')) %}
+                        <li class="waves-effect pager" page_offset="{{ (i-1) * limit }}"><a href="#!">{{ i }}</a></li>
+                            {% endfor %}
+                        {% else %}
+                            {% for i in range((offset/limit+1) - 2, (offset/limit+1) + 2) %}
+                        <li class="waves-effect pager" page_offset="{{ (i-1) * limit }}"><a href="#!">{{ i }}</a></li>
+                            {% endfor %}
+                        {% endif %}
+                        <li id="pageRight" class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+                        {% endif %}
+                </ul>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}
+{% block extend_javascripts %}
+    <script type="text/javascript" src="{{ asset('assets/registration/js/home.js') }}"></script>
+{% endblock %}

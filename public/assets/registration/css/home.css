@@ -1,0 +1,12 @@
+.client-table-container {
+    margin-top : 50px;
+}
+
+.pagination-text {
+    float : left;
+    margin-top : 5px;
+}
+
+.pagination li.active {
+    background-color : green;
+}

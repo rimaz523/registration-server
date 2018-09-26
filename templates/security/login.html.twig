@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Login{% endblock %}
+{% block extend_stylesheets %}
+    <link href="{{ asset('assets/security/css/login.css') }}" rel="stylesheet"/>
+{% endblock %}
+
+{% block body %}
+    <div class="row ospanelholder">
+        <div class="col">
+            <div class="card small-3 grey lighten-5">
+                <div class="card-content black-text">
+                    <span class="card-title">
+                        <img src="{{ asset('assets/base/images/penguin.png') }}">
+                        <span class="header-text">Penguin Server Login</span>
+                    </span>
+                    <div class="row">
+                        <form action="{{ path('login') }}" method="POST">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="text" name="_username" value="{{ last_username }}"/>
+                                    <label for="first_name">Username</label>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <input type="password" name="_password"/>
+                                    <label for="last_name">Password</label>
+                                </div>
+                            </div>
+                            <button class="btn waves-effect waves-light" type="submit" name="action">Login
+                                <i class="material-icons right">send</i>
+                            </button>
+                            {% if error %}
+                                <span>{{ error.messagekey }}</span>
+                            {% endif %}
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

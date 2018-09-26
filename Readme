@@ -1,0 +1,27 @@
+TODO :
+------
+1. Add more dummy client data for testing the list + search etc.
+2. Create Search Form and perform search #
+    a. search by date
+5. version control properly and add to git/bit-bucket
+7. Add the registration script to /
+8. Get country list and append to dropdown from an ajax action call in Home screen 
+        - move country to a seperate service
+9. Menu highlighting based on action
+10. update the country in clients list with actual country name instead of code
+11. Create new screen for Client Details
+14. Add a Datepicker to the Registration Search Form
+15. convert client search params to DTO
+16. Unit Tests
+
+
+Installation Instructions :
+-----------------------------
+
+
+
+Other :
+--------
+1. Password hashing with bcrypt : https://passwordhashing.com/BCrypt
+2. Repository to keep your dao ; https://symfony.com/doc/current/doctrine.html
+3. 

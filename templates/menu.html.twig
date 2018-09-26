@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block menu %}
+    <div class="navbar-fixed">
+        <nav>
+            <div class="nav-wrapper">
+                <a href="#" class="brand-logo">Penguin</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li id="menu_home"><a href="{{ path('home') }}">Home</a></li>
+                    <li id="menu_logout"><a href="{{ path('logout') }}">Logout</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+{% endblock %}

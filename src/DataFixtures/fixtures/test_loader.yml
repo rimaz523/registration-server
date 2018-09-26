@@ -1,0 +1,17 @@
+\App\Entity\User:
+  0: {UserName: 'Admin', Email: 'admin@test.com', Password: 'Admin!23'}
+  1: {UserName: 'rimaz', Email: 'rimaz@test.com', Password: 'Admin!23'}
+  
+\App\Entity\RegUsers:
+  0: {InstanceIdentifier: '#123456789', Date: '2018-08-24 05:34:21', UserName: 'ricky1u2', UserEmail: 'ricky@test.com', Comments: '', Updates: '0', FirstName: 'Ricardo', LastName: 'Silva', Company: 'ABC Limited', Telephone: '0778668688', EmpCount: '550', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  1: {InstanceIdentifier: '#444444444', Date: '2018-09-12 05:34:21', UserName: 'jonathan', UserEmail: 'jonathan@test.com', Comments: '', Updates: '0', FirstName: 'Jonathan', LastName: 'Steve', Company: 'RT', Telephone: '0778663344', EmpCount: '100', CountryCode: 'PH', Language: 'en', Timezone: ''}
+  2: {InstanceIdentifier: '#aad334444', Date: '2018-08-29 05:34:21', UserName: 'sam12', UserEmail: 'sam@test.com', Comments: '', Updates: '0', FirstName: 'Samuel', LastName: 'Jackson', Company: 'BB Cola', Telephone: '0778664433', EmpCount: '0', CountryCode: 'NZ', Language: 'en', Timezone: ''}
+  3: {InstanceIdentifier: '#ttwe33443', Date: '2018-02-01 05:34:21', UserName: 'joe99', UserEmail: 'joe@test.com', Comments: '', Updates: '0', FirstName: 'Joey', LastName: 'Vandam', Company: 'SP Pvt', Telephone: '077861122', EmpCount: '', CountryCode: 'LK', Language: 'en', Timezone: ''}
+  4: {InstanceIdentifier: '#vvv342dd@', Date: '2018-02-22 05:34:21', UserName: 'brad.j', UserEmail: 'brad@test.com', Comments: '', Updates: '0', FirstName: 'Brad', LastName: 'Delson', Company: 'QWERTY Enterprises', Telephone: '0778665555', EmpCount: '1500', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  5: {InstanceIdentifier: '#rtyyurrs@', Date: '2018-02-23 05:34:21', UserName: 'bruce', UserEmail: 'bruce@test.com', Comments: '', Updates: '0', FirstName: 'Bruce', LastName: 'Tenner', Company: 'Tenner Stores', Telephone: '0778665332', EmpCount: '', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  6: {InstanceIdentifier: '#77uu66y5d', Date: '2018-02-12 02:34:21', UserName: 'gervais#$', UserEmail: 'gervais@test.com', Comments: '', Updates: '0', FirstName: 'Gervais', LastName: 'Ric', Company: 'Gervais Holdings', Telephone: '0778665222', EmpCount: '300', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  7: {InstanceIdentifier: '#cde44eews', Date: '2018-02-24 01:34:21', UserName: 'fran@523', UserEmail: 'fran@test.com', Comments: '', Updates: '0', FirstName: 'Frank', LastName: 'Hilly', Company: 'Hilly Coorp', Telephone: '0778665123', EmpCount: '150', CountryCode: 'US', Language: 'en', Timezone: ''}
+  8: {InstanceIdentifier: '#1425ds3sd', Date: '2018-02-24 06:34:21', UserName: 'betty91', UserEmail: 'betty@test.com', Comments: '', Updates: '0', FirstName: 'Betsy', LastName: 'Riverdale', Company: 'BR Enterprises', Telephone: '0778665666', EmpCount: '200', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  9: {InstanceIdentifier: '#sdsesseed', Date: '2018-02-22 07:34:21', UserName: 'ron89', UserEmail: 'ron@test.com', Comments: '', Updates: '0', FirstName: 'Ron', LastName: 'Junior', Company: 'Junior Enterprises', Telephone: '0778665998', EmpCount: '0', CountryCode: 'PT', Language: 'en', Timezone: ''}
+  10: {InstanceIdentifier: '#555666fs', Date: '2018-02-22 02:34:21', UserName: 'doc@3', UserEmail: 'doc@test.com', Comments: '', Updates: '0', FirstName: 'Doc', LastName: 'Block', Company: 'DOC Works', Telephone: '0778665777', EmpCount: '10', CountryCode: 'US', Language: 'en', Timezone: ''}
+  
