@@ -15,3 +15,19 @@ TODO :
 
 Installation Instructions :
 -----------------------------
+1. Clone the repo to your local instance & give the proper file permissions.
+2. Go to your project root and run : composer install
+3. Update your Database credentials in the <root>/.env file
+    a. Example : DATABASE_URL=mysql://root:password@db55:3306/database_name
+4. Open up you phpmyadmin, create the database above and source the registration server dbscripts here.
+    a. Note this is the sql from the existing registration server.
+    b. This app is built on top of that database.
+    c. TODO : migrate the SQL from the existing registration server to this app.
+5. Run the SQL migrations specific to this app on top of the database
+    a. command : php bin/console doctrine:migrations:migrate
+6. Optional : Load the Test Data
+    a. command : php bin/console doctrine:fixtures:load
+7. Access the build with the following URL : https://your_app:port/login
+    a. Reason for using /login : since the register script will be added to / in future.
+8. Enter the following credentials to login if you have Loaded the data :
+    a. Username : Admin  Password : Admin!23
