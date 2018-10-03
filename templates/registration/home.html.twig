@@ -83,7 +83,7 @@
                     {% if total > limit %}
                         <li id="pageLeft" class="waves-effect"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
                         {% if total/limit <= 5 or (offset/limit) < 3 %}    
-                            {% for i in range(1, ((total/limit)|round(0, 'ceil'))) %}
+                            {% for i in range(1, (((total/limit)|round(0, 'ceil')) < 5 ? ((total/limit)|round(0, 'ceil')) : 5)) %}
                         <li class="waves-effect pager" page_offset="{{ (i-1) * limit }}"><a href="#!">{{ i }}</a></li>
                             {% endfor %} 
                         {% elseif (total/limit > 5) and (((offset/limit)|round(0, 'floor') == (total/limit)|round(0, 'floor')) or ((offset/limit)|round(0, 'floor') == ((total/limit) -1)|round(0, 'floor'))) %}
