@@ -8,10 +8,13 @@ use Doctrine\ORM\Mapping as ORM;
  * OrangeOrganizationEmployee
  *
  * @ORM\Table(name="orange_organization_employee", indexes={@ORM\Index(name="instance_identifier", columns={"instance_identifier"})})
- * @ORM\Entity
+ * @ORM\Entity(repositoryClass="App\Repository\OrangeOrganizationEmployeeRepository")
  */
 class OrangeOrganizationEmployee
 {
+    const INCREMENT_COUNT_TYPE = 1;
+    const DECREMENT_COUNT_TYPE = 2;
+    
     /**
      * @var int
      *

@@ -3,6 +3,10 @@
 namespace App\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use App\Entity\OrangeOrganizationEmployee;
+use Doctrine\Common\Persistence\ObjectManagerAware;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\Mapping\ClassMetadata;
 
 /**
  * RegUsers
@@ -10,7 +14,7 @@ use Doctrine\ORM\Mapping as ORM;
  * @ORM\Table(name="reg_users")
  * @ORM\Entity(repositoryClass="App\Repository\RegUsersRepository")
  */
-class RegUsers
+class RegUsers implements ObjectManagerAware
 {
     /**
      * @var string
@@ -110,6 +114,8 @@ class RegUsers
      * @ORM\Column(name="last_name", type="string", length=255, nullable=true)
      */
     private $lastName;
+
+    private $em;
 
     
     public function getInstanceIdentifier()
@@ -251,5 +257,20 @@ class RegUsers
     public function setLastName($lastName)
     {
         $this->lastName = $lastName;
+    }
+
+    public function injectObjectManager(ObjectManager $objectManager, ClassMetadata $classMetadata) 
+    {
+        $this->em = $objectManager;
+    }
+
+    public function getCurrentEmployeeCount()
+    {
+        $lastIncrement = $this->em->getRepository(OrangeOrganizationEmployee::class)->getLastEmployeeCountIncrement($this->getInstanceIdentifier());
+        if (!empty($lastIncrement)) {
+            $record = $lastIncrement[0];
+            return $record->getCount();
+        }
+        return 0;
     }
 }

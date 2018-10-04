@@ -25,7 +25,7 @@ class RegisteredUsersCSVExportFormatter extends CSVFileFormatter
             $row[] = $client->getUsername();
             $row[] = $client->getUserEmail();
             $row[] = $client->getTelephone();
-            $row[] = $client->getEmpCount();
+            $row[] = $client->getCurrentEmployeeCount();
             $row[] = $client->getDate();
             fputcsv($fp, $row);
         }
